@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*請制將h1與p 排在一起*/
+      h1 {
+        display: inline;
+      }
+      p {
+        display: inline;
+      }
+      /*block可設定寬高 inline不行 */
+      /*請制將a改成block */
+      /*轉成block 或 inline block才可設定寬高跟padding*/
+      a {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      strong {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Title</h1>
+    <p>
+      <!---h1 p  div 屬於 block  標籤   strong a em span 等 屬inline標籤-->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eum id,
+      asperiores eveniet <a href="#">obcaecati perferendis</a> atque voluptate
+      quod <strong>fugit repudiandae</strong> , facere tempora officia
+      <em>earum dolores animi.</em> Ullam assumenda accusamus a?
+      <span>span span span span span</span>
+    </p>
+    <ul>
+      <li>list</li>
+      <li>list</li>
+      <li>list</li>
+      <li>list</li>
+    </ul>
+    <div>
+      div Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+      laborum quibusdam expedita itaque, facere perspiciatis recusandae vero
+      cumque tempora tenetur aperiam hic illo ipsum eos provident voluptates
+      soluta voluptatum quis.
+    </div>
+  </body>
+</html>

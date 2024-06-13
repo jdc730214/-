@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      .warp {
+        width: 960px;
+        display: flex;
+        margin: auto;
+      }
+      .item {
+        width: 300px;
+        margin: 10px;
+        border: 1px solid#aaa;
+        padding: 10px;
+        position: relative;
+      }
+      .item img {
+        width: 100%;
+      }
+      /* 要將tab放在每個方塊左上方,設定absolute 父層item也需設定*/
+      .tab {
+        background-color: #f00;
+        color: #fff;
+        padding: 6px 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="item">
+        <div class="tab">Hot</div>
+        <img src="https://picsum.photos/300/200/?random=10" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
+          aliquam vero molestiae cum. Cumque, ipsam nihil? A laborum, aliquid ut
+          cumque tempora molestiae totam delectus deserunt corporis, adipisci
+          repellat.
+        </p>
+      </div>
+      <div class="item">
+        <div class="tab">Hot</div>
+        <img src="https://picsum.photos/300/200/?random=5" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
+          aliquam vero molestiae cum. Cumque, ipsam nihil? A laborum, aliquid ut
+          cumque tempora molestiae totam delectus deserunt corporis, adipisci
+          repellat.
+        </p>
+      </div>
+      <div class="item">
+        <div class="tab">Hot</div>
+        <img src="https://picsum.photos/300/200/?random=1" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
+          aliquam vero molestiae cum. Cumque, ipsam nihil? A laborum, aliquid ut
+          cumque tempora molestiae totam delectus deserunt corporis, adipisci
+          repellat.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

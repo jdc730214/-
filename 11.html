@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 960px;
+
+        background-color: blanchedalmond;
+        margin: auto;
+        /*padding: 20px;*/
+      }
+      /* col為container子物件 若設為float 則父物件為無內容 除非有設height*/
+      /*
+      .col {
+        width: 300px;
+        height: 200px;
+        background-color: #ccc;
+        float: left;
+      }*/
+
+      /*解決方式在子層內加最後一層 style設 clear both
+      會在浮動物件下方*/
+
+      .col {
+        width: 280px;
+
+        background-color: #ccc;
+        margin: 10px;
+        float: left;
+        padding: 10px;
+      }
+      .clear-both {
+        clear: both;
+        height: 0px;
+        background-color: red;
+      }
+      .col img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">
+        <img src="https://fakeimg.pl/250x100/200" />
+        <h3>title</h3>
+        <p>
+          Lorem ipsum dolor sit amet 250s100etur, adipisicing elit. Provident
+          aut rem ab, dolorum aliquam250 100o voluptatum, architecto saepe
+          cumque asperiores vel adipi250 100udiandae alias velit voluptates
+          vitae unde quis!
+        </p>
+      </div>
+      <div class="col">
+        <img src="https://fakeimg.pl/250x100/200" />
+        <h3>title</h3>
+        <p>
+          Lorem ipsum dolor sit amet 250s100etur, adipisicing elit. Provident
+          aut rem ab, dolorum aliquam250 100o voluptatum, architecto saepe
+          cumque asperiores vel adipi250 100udiandae alias velit voluptates
+          vitae unde quis!
+        </p>
+      </div>
+      <div class="col">
+        <img src="https://fakeimg.pl/250x100/200" />
+        <h3>title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
+          aut rem ab, dolorum aliquam ut illo voluptatum, architecto saepe
+          cumque asperiores vel adipisci repudiandae alias velit voluptates
+          vitae unde quis!
+        </p>
+      </div>
+      <div class="clear-both"></div>
+    </div>
+  </body>
+</html>

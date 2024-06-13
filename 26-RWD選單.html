@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .header {
+        height: 50px;
+        background-color: #ccc;
+        position: relative;
+      }
+      .logo {
+        width: 60px;
+        height: 40px;
+        margin-left: 10px;
+      }
+      .log a {
+        display: block;
+        height: 40px;
+      }
+      .logo img {
+        display: block;
+      }
+      .menu_btn {
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        color: white;
+        display: block; /* 沒設會無法設定寬高 他原本屬性為inline*/
+        /*要讓他在右側 所以使用 absolute 請注意父層要設 relative*/
+        position: absolute;
+        top: 5px;
+        right: 10px;
+      }
+      .menu_btn span {
+        /*讓文字消失*/
+        opacity: 0;
+      }
+      .menu_btn::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 36px;
+
+        background-color: #aaa;
+        left: 2px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /*製作影分身*/
+        box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+      }
+      nav {
+        width: 80%;
+        /*vh 為viewport Height的百分比*/
+        height: calc(100vh - 50px);
+        background-color: #282923;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+      }
+      nav a {
+        display: block;
+        text-decoration: none;
+        color: #a6e22c;
+        padding: 10px 20px;
+        border-bottom: 1px solid #a6e22c;
+      }
+      #menu-control {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        /* left: 100px;
+        top: 50px;*/
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+        opacity: 0;
+      }
+      /*同層用 ~*/
+      #menu-control:checked ~ .header nav {
+        left: 0;
+        transition: left 1s 0s ease; /*先變顏色5秒後padding*/
+      }
+
+      @media screen and (min-width: 768px) {
+        .menu_btn {
+          display: none;
+        }
+        .header {
+          display: flex;
+          justify-content: space-between;
+          background-color: #282923;
+          align-items: center;
+        }
+        nav {
+          display: flex;
+          position: relative;
+          left: 0;
+          top: 0;
+          width: auto;
+          height: auto;
+          background-color: transparent;
+        }
+        nav a {
+          border-bottom: none;
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="menu-control" />
+    <div class="header">
+      <h1 class="logo">
+        <a href="#">
+          <img src="https://picsum.photos/60/40/?random=10" />
+        </a>
+      </h1>
+      <label for="menu_control" class="menu_btn">
+        <span> 選單 </span>
+      </label>
+      <nav>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+      </nav>
+    </div>
+  </body>
+</html>

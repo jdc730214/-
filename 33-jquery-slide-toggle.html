@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .controler {
+        display: block;
+        padding: 6px 10px;
+        background-color: #000;
+        color: #fff;
+        width: 320px;
+        text-decoration: none;
+      }
+      .text {
+        width: 300px;
+        padding: 20px;
+        background-color: #ccc;
+      }
+      .text.close {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="controler controler1">開/關</a>
+    <div class="text text1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
+      aperiam provident recusandae illo necessitatibus esse corporis nisi
+      commodi nostrum amet laborum, nobis iste neque cumque unde consectetur eum
+      qui. Dicta est nam possimus nihil modi a maiores hic eum assumenda qui
+      animi quod architecto accusamus autem nemo, quae asperiores! Nam dicta
+      impedit labore dignissimos quidem, hic totam tempore deleniti enim facilis
+      expedita corrupti placeat possimus provident autem eos aspernatur
+      perferendis laudantium incidunt? Velit illo pariatur laboriosam saepe
+      beatae atque excepturi sint consequuntur eligendi veritatis, rerum a
+      voluptas amet quis error alias porro ipsum. Pariatur, facilis similique ea
+      amet labore facere.
+    </div>
+
+    <a href="#" class="controler controler2">開/關</a>
+    <div class="text text2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
+      aperiam provident recusandae illo necessitatibus esse corporis nisi
+      commodi nostrum amet laborum, nobis iste neque cumque unde consectetur eum
+      qui. Dicta est nam possimus nihil modi a maiores hic eum assumenda qui
+      animi quod architecto accusamus autem nemo, quae asperiores! Nam dicta
+      impedit labore dignissimos quidem, hic totam tempore deleniti enim facilis
+      expedita corrupti placeat possimus provident autem eos aspernatur
+      perferendis laudantium incidunt? Velit illo pariatur laboriosam saepe
+      beatae atque excepturi sint consequuntur eligendi veritatis, rerum a
+      voluptas amet quis error alias porro ipsum. Pariatur, facilis similique ea
+      amet labore facere.
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".controler1").click(function () {
+          $(".text1").slideToggle();
+        });
+
+        $(".controler2").click(function () {
+          $(".text2").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

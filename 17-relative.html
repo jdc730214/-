@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      li {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        color: aliceblue;
+        margin: 5px 5px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 100px;
+      }
+      li:hover {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+      }
+      /*有設定 position 方式 才能用 top left等，relative 可想做是偏移顯示*/
+      .item17 {
+        position: relative;
+        top: 30px;
+        left: 30px;
+        background-color: red;
+        opacity: 0.5;
+      }
+
+      /*有設定 position 方式 時後方物件會蓋住前面的*/
+      .item18 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+      /*有設定 position 方式 可用z-index來選擇誰蓋住誰*/
+      .item19 {
+        position: relative;
+        bottom: 30px;
+        right: 30px;
+        background-color: rgb(45, 228, 45);
+        opacity: 0.5;
+        z-index: -1;
+      }
+      /*有設定 position 方式 可將20 21 換位置 物件寬+margain *2*/
+      .item20 {
+        position: relative;
+        background-color: rgb(124, 45, 228);
+        left: 110px;
+      }
+      .item21 {
+        position: relative;
+        background-color: rgb(213, 211, 215);
+        left: -110px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li class="item1">1</li>
+      <li class="item2">2</li>
+      <li class="item3">3</li>
+      <li class="item4">4</li>
+      <li class="item5">5</li>
+      <li class="item6">6</li>
+      <li class="item7">7</li>
+      <li class="item8">8</li>
+      <li class="item9">9</li>
+      <li class="item10">10</li>
+
+      <li class="item11">11</li>
+      <li class="item12">12</li>
+      <li class="item13">13</li>
+      <li class="item14">14</li>
+      <li class="item15">15</li>
+      <li class="item16">16</li>
+      <li class="item17">17</li>
+      <li class="item18">18</li>
+      <li class="item19">19</li>
+      <li class="item20">20</li>
+
+      <li class="item21">21</li>
+      <li class="item22">22</li>
+      <li class="item23">23</li>
+      <li class="item24">24</li>
+      <li class="item25">25</li>
+      <li class="item26">26</li>
+      <li class="item27">27</li>
+      <li class="item28">28</li>
+      <li class="item29">29</li>
+      <li class="item30">30</li>
+
+      <li class="item41">41</li>
+      <li class="item42">42</li>
+      <li class="item43">43</li>
+      <li class="item44">44</li>
+      <li class="item45">45</li>
+      <li class="item46">46</li>
+      <li class="item47">47</li>
+      <li class="item48">48</li>
+      <li class="item49">49</li>
+      <li class="item50">50</li>
+    </ul>
+  </body>
+</html>

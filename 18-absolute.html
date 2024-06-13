@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      div {
+        border: 2px solid #00f;
+        padding: 40px;
+        font-size: 24px;
+      }
+      /*當父類b有定位 c則會依b去定位*/
+      .b {
+        position: relative;
+      }
+
+      /*會往父層一直找誰有  absolute relative fixed來參考若沒有則會定到視窗 */
+      .c {
+        position: absolute; /*用在這個東西不需要跟其他東西一起排列*/
+        left: 0;
+        top: 0;
+        border: 2px solid #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      a
+      <div class="b">
+        b
+        <div class="c">c</div>
+      </div>
+    </div>
+  </body>
+</html>

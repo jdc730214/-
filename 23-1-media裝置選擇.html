@@ -1,0 +1,62 @@
+<!-- https://csscoke.com/webq/ 可以查詢設備資訊 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .warp {
+        width: 100%;
+        height: 300px;
+      }
+      .test {
+        width: 100%;
+        height: 300px;
+        display: none; /*一開始時不出現*/
+      }
+
+      .test1 {
+        background-color: #ffa;
+      }
+      .test2 {
+        background-color: #aaf;
+      }
+      /*當整個窗大於500時運行*/
+      @media screen and (min-width: 500px) {
+        .test {
+          display: block;
+        }
+      }
+      /*當整個窗大於769時運行*/
+      @media screen and (min-width: 768px) {
+        .warp {
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="test test1" onmouseenter="updateViewPortWidth()">
+        <p id="txt_p">The ViewPort Width:</p>
+      </div>
+      <div class="test test2">Test2</div>
+    </div>
+  </body>
+  <script>
+    function updateViewPortWidth() {
+      var p = document.getElementById("txt_p");
+      p.innerHTML =
+        "The ViewPort Width:" + document.documentElement.clientWidth.toString();
+    }
+  </script>
+</html>

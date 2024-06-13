@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000;
+        text-decoration: none;
+        color: #fff;
+        /* transition: 屬性 轉換時間 延遲執行時間 速度; */
+        /* transition: color 1.5s 0s ease; */
+        /*transition: background-color 5s 0s ease; 只有背景色會有5秒的變化*/
+        transition: background-color 5s 0s ease, padding 5s 5s ease; /*先變顏色5秒後padding*/
+      }
+      .btn:hover {
+        background-color: #f00;
+        color: blue;
+        padding: 20px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="btn" href="#">送出</a>
+  </body>
+</html>

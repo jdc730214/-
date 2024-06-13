@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .box-a {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        background-color: #aaa;
+      }
+      .box-b {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        background-color: #faa;
+      }
+      .content {
+        display: none;
+      }
+      .product-title {
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://api.jquery.com/ 可以查看api  -->
+
+    <div class="box-a">box-a</div>
+    <div class="box-b">box-b</div>
+    <div class="product-title">產品介紹</div>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laboriosam
+      velit itaque sequi sunt asperiores cum debitis. Ipsam totam recusandae
+      nesciunt. Voluptate expedita, temporibus porro ipsam quis quibusdam dolor
+      sequi, natus earum animi nihil ea suscipit quae, possimus assumenda at
+      dolorum esse. Impedit labore, quisquam odio dolores omnis temporibus
+      accusantium voluptates, repellat ratione obcaecati similique tempora
+      cupiditate fugit delectus officiis perferendis, nostrum placeat illo fuga
+      earum alias laboriosam adipisci ipsa esse? Cumque soluta velit architecto
+      praesentium fuga ab debitis quae officiis suscipit quo eius in quidem
+      cupiditate a mollitia nisi maxime aut voluptatibus, saepe vel nihil
+      consectetur magni esse impedit. Deserunt aliquid ea quas minus laudantium
+      asperiores, hic optio incidunt deleniti debitis architecto ex itaque,
+      beatae facilis quibusdam magnam recusandae ut reprehenderit numquam
+      consequatur soluta mollitia dolorem. Praesentium libero tenetur esse minus
+      quis blanditiis debitis consequuntur excepturi quo, architecto fugit cum
+      facilis hic reiciendis eaque! Non sunt ad quia doloremque inventore
+      suscipit asperiores quod assumenda aliquam ex porro qui, dolore nobis?
+      Asperiores repellat corporis tempore recusandae fugiat impedit, cumque
+      ipsa quisquam at architecto beatae quo vero magni? Quibusdam voluptatem
+      voluptas quidem ab, libero perferendis voluptatibus nisi commodi provident
+      nam explicabo aliquid dignissimos eius quod eos repudiandae laudantium
+      corrupti harum animi saepe. Error illum, laborum labore dolore nemo
+      officia, dolorem voluptate enim sunt dolorum aliquam. Sapiente repellendus
+      nulla tempora dolores nesciunt beatae reprehenderit eaque earum deleniti
+      cupiditate assumenda unde temporibus dolorum necessitatibus amet ex iste
+      eius, eveniet quas id? Voluptatem architecto dignissimos consequatur!
+      Sequi minus, ea corporis vitae iusto excepturi, molestiae, error veniam
+      maxime voluptas sit nisi quisquam impedit dolore ratione alias rem quod
+      pariatur vel voluptatem. Velit rerum, sint voluptas deserunt voluptate
+      modi possimus quis molestias optio excepturi libero qui debitis eaque
+      omnis praesentium deleniti reiciendis molestiae iste ex necessitatibus
+      fugiat. Veritatis omnis facilis assumenda ducimus aperiam similique rerum
+      aliquam?
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //以下開始寫
+        // $("CSS選取器 id用# class用. 標籤用名字就行")
+        $(".box-a").click(function () {
+          $(".box-b").toggle();
+        });
+      });
+
+      $(".product-title").click(function () {
+        $(".content").toggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      .header {
+        display: flex;
+        padding: 6px 10px;
+        background-color: #000;
+      }
+
+      .header nav {
+        text-align: center;
+        width: 100%;
+        font-size: 0; /*不要有間距*/
+      }
+      .header nav a {
+        display: inline-block;
+        line-height: 52px; /* 40 +(6*2)*/
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        padding: 0px 10px;
+      }
+      .header .logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .header nav a:hover {
+        background-color: #fa0;
+      }
+      .banner img {
+        width: 100%;
+      }
+      .path {
+        display: flex;
+        width: 100%;
+      }
+      .path li {
+        position: relative;
+        padding: 6px 8px;
+      }
+
+      .path li a {
+        font-size: 15px;
+        text-decoration: none;
+        color: #aaa;
+      }
+      .path li + li::before {
+        content: "/";
+        position: absolute; /*父類要設在li 才會有3個 '/' */
+        left: 0;
+      }
+
+      .warp {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .warp .item {
+        width: 300px;
+        margin: 0 20px;
+        text-align: center;
+      }
+      .warp .item img {
+        width: 50px;
+      }
+      .warp1 {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      /* '>' 用來只對第一層指定  */
+      .about .warp1 > h3 {
+        padding: 10px 0;
+        font-size: 35px;
+      }
+      .about img {
+        border-radius: 50%;
+      }
+      .products {
+        background-color: #ccc;
+      }
+      .products .warp {
+        display: flex;
+      }
+      /*讓圖片與文字各佔一半*/
+      .products .item {
+        width: 50%;
+      }
+      .products .item img {
+        width: 100%;
+        vertical-align: bottom; /*讓圖片與底下的copyright不要有間距*/
+      }
+      .products .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        text-align: center;
+      }
+      .about {
+        padding: 40px 0 60px;
+      }
+      .item h3 {
+        font-size: 30px;
+        padding: 10px 0 30px;
+      }
+      .text h3 {
+        padding: 0 20px 30px 0;
+      }
+      .fotter {
+        text-align: center;
+        background-color: #000;
+        color: #888;
+        padding: 20px 0;
+      }
+      .service {
+        padding: 40px 0;
+        background-color: #ffa;
+      }
+      .service > h2 {
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        font-size: 42px;
+        padding: 20px 0;
+      }
+      .service > p {
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .service .warp {
+        display: flex;
+      }
+      .service .item {
+        margin: 0 10px;
+        width: 300px;
+        text-align: center;
+      }
+      .service .item h3 {
+      }
+      .service .item p {
+      }
+      .service .item img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#">
+        <img
+          class="logo"
+          src="https://picsum.photos/50/50/?random=10"
+          alt="網站名稱"
+        />
+      </a>
+      <nav>
+        <a href="#">關於我們</a>
+        <a href="#">最新消息</a>
+        <a href="#">產品</a>
+        <a href="#">服務</a>
+        <a href="#">聯絡我們</a>
+        <a href="#">網站地圖</a>
+      </nav>
+    </div>
+
+    <div class="banner">
+      <img src="https://picsum.photos/1200/300/?random=10" />
+    </div>
+
+    <ul class="path">
+      <li><a href="#">首頁</a></li>
+      <li><a href="#">最新消息</a></li>
+      <li><a href="#">聯絡我們</a></li>
+    </ul>
+
+    <div class="about">
+      <div class="warp1">
+        <h3>關於我們</h3>
+        <div class="warp2">
+          <h3>不可發表話題默認這麼多以下釣魚犯罪活力已有資料庫給我們同時。</h3>
+        </div>
+      </div>
+      <div class="warp">
+        <div class="item">
+          <img src="https://picsum.photos/500/500/?random=1" />
+          <h3>title</h3>
+          <p>
+            武器傳輸自主大家及時用品最為得到最好的收費風景，主人今天過去西部另一個，司機漢化應該劇情頓時宣傳關於需求這款有一種歡迎您一種本網站，不能德國不僅一定幽默，上傳資金女士大力站在進口出口你怎不來，也是在這來源異常打開出去輸入眼前道德平方米究竟公告，仔細上有，逐漸資格主角，規範電源，大大教育活動，而且僅。
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/500/500/?random=2" />
+          <h3>title</h3>
+          <p>
+            證券圖象政策基層希望下去不禁重要政府，每天確實引導意外最重要寫作反覆多麼感興趣引發，一週功夫我對記錄價格微軟規則榮譽，天天顯示秘密造型我說程式營銷此外，記錄感興趣難以行動相當本帖奇怪每個人，日月潭，怎麼辦星座警察狀態東方利潤於是學生檢驗未知不斷因為翻譯，糖尿病不良立場資產出台同事效率之前區域，引導。
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/500/500/?random=3" />
+          <h3>title</h3>
+          <p>
+            我是幫忙寫真出生核心歐洲很多對不起貸款從而，豪華成立發行這個問題近期書記已有人才風情隨時飲食，時刻判斷傳來一起，全市歐洲投票創業買了說了名單戰士特別發現調節工資早上一座，最重要困難建立理想遺憾警告相同，像素眾多集團團體福建最高，此處細節期間手段雜誌，警察政治什麼樣哈哈主要好像當我業主，因而一口，巨。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <div class="warp">
+        <div class="item pic">
+          <img src="https://picsum.photos/300/200/?random=88" />
+        </div>
+        <div class="item text">
+          <h3>title</h3>
+          <p>
+            一遍便宜調整學術，選手三個先進性小區辦公室，將在製作精選經過有時都不，以外日期規則重視降價就在很多人官員，提高宅宅設計原創，小七風情有所強調專用接口一時學校我的設施請大家生成一臉，都不彩色好友生活，大眾下降變成兒童老師，很快本書公主說過多個總經理證明過程像素引導今日因為小區密碼，沒人複雜會計好多技。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <h2>服務類型</h2>
+      <p>
+        舉辦起來當年拿出氣氛天堂，當前以前殺手不說回應上一頁看看商品區域否則，職工抓住手段長時間就能但是頁。
+      </p>
+      <div class="warp">
+        <div class="item">
+          <img src="https://picsum.photos/300/200/?random=21" />
+          <h3>服務類型-1</h3>
+          <p>
+            首先一次狀況全國紡織大聲團隊表明報導報名進了事務實際英文，浪漫關閉財產感情你不灌水青年趕緊互相聲音。
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200/?random=22" />
+          <h3>服務類型-2</h3>
+          <p>
+            他對機器民族安徽價格大學，初音國內外首頁售價使得上帝，網址流行於是服飾他人更為之外當前有限公司，就。
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200/?random=23" />
+          <h3>服務類型-3</h3>
+          <p>
+            我愛自行寫作很久治療不如地說我國網際奇蹟老婆十二，行情歡迎您，爸爸覺得練習人群品質，常用這個需求植。
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200/?random=24" />
+          <h3>服務類型-4</h3>
+          <p>
+            開發以前軍事戀愛，修改主持付出沒有任何所屬，下午效率符合世界盃相關搭配規律重點，買了添加高達期待設。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fotter">&copy; copyright 2024 06 04 by JD Chen</div>
+  </body>
+</html>
